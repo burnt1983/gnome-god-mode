@@ -369,6 +369,15 @@ class GodModeWindow(Gtk.ApplicationWindow):
         self.set_resizable(True)
         self.set_keep_above(True)
         self.set_position(Gtk.WindowPosition.CENTER)
+        if "--desklet" in sys.argv or "--panel" in sys.argv:
+            self.set_skip_taskbar_hint(True)
+            self.set_skip_pager_hint(True)
+            try:
+                self.stick()
+            except Exception:
+                pass
+            if "--panel" in sys.argv:
+                self.set_default_size(420, 520)
         if ICON.exists():
             self.set_icon_from_file(str(ICON))
 
@@ -1086,7 +1095,8 @@ def main(argv: list[str] | None = None) -> int:
     if "--self-test" in argv:
         return _self_test(catalog)
     app = GodModeApp(catalog)
-    return app.run(argv)
+    gtk_argv = [argv[0]] + [a for a in argv[1:] if a not in {"--desklet", "--panel"}]
+    return app.run(gtk_argv)
 
 
 def _self_test(catalog: list[KeyRec]) -> int:

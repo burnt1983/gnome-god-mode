@@ -39,7 +39,17 @@ python3 god_mode.py --self-test
 Writes go through `Gio.Settings` immediately. Favourites live in
 `~/.config/lee-god-mode/favorites.json`.
 
-## Cinnamon / desklets
+## Desklet / panel (any Linux)
+
+| Command | What you get |
+|---|---|
+| `god-mode` | Keep-on-top settings panel |
+| `god-mode --desklet` | Same panel, no taskbar, all workspaces |
+| `god-mode --panel` | Smaller window you can sit by the panel |
+
+Works on GNOME, Cinnamon, MATE, XFCE, Budgie, LXQt, and KDE (GNOME schemas are richest). Cinnamon: Settings → Applets → God Mode.
+
+## Cinnamon spices store
 
 This is a GTK 3 app, so it runs on Cinnamon as a floating window too. It is
 **not** a Cinnamon desklet spice. The Linux Mint spices store only lists

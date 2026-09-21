@@ -1,0 +1,11 @@
+{
+  "uuid": "god-mode@burnt1983",
+  "name": "God Mode",
+  "description": "Search and change GNOME / Linux settings from one panel",
+  "icon": "preferences-system",
+  "command": "god-mode --desklet",
+  "panel_command": "god-mode",
+  "prevent-decorations": true,
+  "max-instances": 1,
+  "version": "1.0"
+}

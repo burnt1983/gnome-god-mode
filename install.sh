@@ -23,7 +23,14 @@ if [[ -f /usr/share/icons/Yaru/256x256/apps/org.gnome.Settings.png ]]; then
   cp /usr/share/icons/Yaru/256x256/apps/org.gnome.Settings.png "$ICONS/lee-god-mode.png"
 fi
 
+if [ -d "$ROOT/cinnamon" ]; then
+  mkdir -p "${HOME}/.local/share/cinnamon/desklets" "${HOME}/.local/share/cinnamon/applets"
+  cp -a "$ROOT/cinnamon/desklets/." "${HOME}/.local/share/cinnamon/desklets/"
+  cp -a "$ROOT/cinnamon/applets/." "${HOME}/.local/share/cinnamon/applets/"
+fi
+
 echo "Installed God Mode."
-echo "  Launch:  god-mode"
-echo "  Search:  gnome-god-mode-search   (opens GNOME Settings)"
-echo "Changes write instantly through gsettings. Star a row to pin it on Quick."
+echo "  Window:   god-mode"
+echo "  Desklet:  god-mode --desklet"
+echo "  Search:   gnome-god-mode-search"
+echo "Cinnamon: Applets → God Mode. Other desktops: add the launcher to the panel."
