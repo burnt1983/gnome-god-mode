@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=God Mode
+Comment=Search and change every GNOME setting from one keep-on-top panel
+Exec=god-mode
+Icon=org.gnome.Settings
+Terminal=false
+Categories=Settings;System;Utility;
+StartupNotify=true
+StartupWMClass=lee-god-mode-widget
+Keywords=godmode;gsettings;dconf;tweaks;settings;gnome;
