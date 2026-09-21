@@ -1,5 +1,7 @@
 # GNOME God Mode
 
+<p align="center"><img src="https://repository-images.githubusercontent.com/1380060184/60601247-dc89-427c-be27-2d7a439f8234" alt="God Mode" width="640"></p>
+
 A keep-on-top panel that lists **every GNOME setting** with a live switch,
 slider, dropdown or text field. Search, star favourites, reset to default,
 or jump into the matching Settings panel.
